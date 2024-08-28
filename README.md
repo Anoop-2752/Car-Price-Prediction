@@ -1,6 +1,6 @@
 # Car Price Prediction Project.
 
-## Project Overview
+## Project Overview.
 
 This project focuses on predicting car prices using various features from a dataset that includes auto specifications, insurance risk ratings, and normalized losses. The goal is to build a robust machine learning model that accurately estimates car prices based on these features.
 
