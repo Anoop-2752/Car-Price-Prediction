@@ -42,9 +42,9 @@ The dataset includes three main entities:
 
 | Technology | Description |
 |:-----------|:-----------:|
-| Python    | Backend & Machine Learning |
-| Flask     | API Development  | 
-| HTML, CSS  | Frontend |
+| `Python`    | Backend & Machine Learning |
+| `Flask`    | API Development  | 
+| `HTML, CSS`  | Frontend |
 
 
 
