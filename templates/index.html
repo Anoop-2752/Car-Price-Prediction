@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Price Prediction</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 700px;
+            margin-top: 30px;
+            padding: 25px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-group label {
+            font-weight: bold;
+        }
+        .example-box {
+            background: #e9ecef;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2 class="text-center">🚗 Car Price Prediction</h2>
+
+    <div class="example-box">
+        <h5>📝 Example Input:</h5>
+        <ul>
+            <li><strong>Car Make:</strong> Toyota</li>
+            <li><strong>Fuel Type:</strong> Gas</li>
+            <li><strong>Horsepower:</strong> 130</li>
+            <li><strong>City MPG:</strong> 25</li>
+            <li><strong>Engine Size:</strong> 1800 cc</li>
+        </ul>
+        <p>Fill in the form below and click <strong>"Predict Price"</strong> to get an estimated car price.</p>
+    </div>
+
+    <form action="/predict" method="post">
+
+        <div class="form-group">
+            <label>🚗 Symboling (Risk Rating):</label>
+            <input type="number" name="symboling" class="form-control" placeholder="e.g. 3" required>
+        </div>
+
+        <div class="form-group">
+            <label>📉 Normalized Losses:</label>
+            <input type="number" name="norm_losses" class="form-control" placeholder="e.g. 100" required>
+        </div>
+
+        <div class="form-group">
+            <label>🏭 Car Make:</label>
+            <input type="text" name="make" class="form-control" placeholder="e.g. Toyota" required>
+        </div>
+
+        <div class="form-group">
+            <label>⛽ Fuel Type:</label>
+            <select name="fuel_type" class="form-control" required>
+                <option value="gas">Gas</option>
+                <option value="diesel">Diesel</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>💨 Aspiration:</label>
+            <select name="aspiration" class="form-control" required>
+                <option value="std">Standard</option>
+                <option value="turbo">Turbo</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>🚪 Number of Doors:</label>
+            <select name="no_of_doors" class="form-control" required>
+                <option value="2">2</option>
+                <option value="4">4</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>🚙 Body Style:</label>
+            <input type="text" name="body_style" class="form-control" placeholder="e.g. sedan" required>
+        </div>
+
+        <div class="form-group">
+            <label>📏 Wheel Base (inches):</label>
+            <input type="number" name="wheel_base" step="0.01" class="form-control" placeholder="e.g. 88.6" required>
+        </div>
+
+        <div class="form-group">
+            <label>🐎 Horsepower:</label>
+            <input type="number" name="horsepower" class="form-control" placeholder="e.g. 130" required>
+        </div>
+
+        <div class="form-group">
+            <label>⚙️ Engine Size (cc):</label>
+            <input type="number" name="eng_size" class="form-control" placeholder="e.g. 1800" required>
+        </div>
+
+        <div class="form-group">
+            <label>🚦 City MPG:</label>
+            <input type="number" name="city_mpg" class="form-control" placeholder="e.g. 25" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block">Predict Price</button>
+    </form>
+
+    {% if prediction_text %}
+        <div class="alert alert-success text-center mt-3">
+            <h4>{{ prediction_text }}</h4>
+        </div>
+    {% endif %}
+</div>
+
+</body>
+</html>
