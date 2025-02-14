@@ -38,6 +38,17 @@ The dataset includes three main entities:
 - **Model Performance**: The Random Forest model emerged as the best performer with an RMSE of X and an R² of Y.
 - **Feature Importance**: Engine size, curb weight, and horsepower were identified as the most important predictors of car prices.
 
+## Tech Stact
+
+| Technology | Description |
+|:-----------|:-----------:|
+| Python    | Backend & Machine Learning |
+| Flask     | API Development  | 
+| HTML, CSS  | Frontend |
+
+
+
+
 ## Conclusion
 
 The project successfully developed a machine learning model to predict car prices with high accuracy. The Random Forest model was the top performer, and key features affecting car prices were identified. Future work could involve exploring more advanced models, incorporating additional features, and fine-tuning existing models.
@@ -47,3 +58,7 @@ The project successfully developed a machine learning model to predict car price
 - **Model Optimization**: Fine-tuning hyperparameters for better performance.
 - **Feature Expansion**: Including additional features or external data sources to enhance model accuracy.
 - **Deployment**: Deploying the model as a web service for real-time predictions.
+
+
+
+
